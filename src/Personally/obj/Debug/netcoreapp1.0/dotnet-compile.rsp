@@ -172,6 +172,8 @@ C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Perso
 C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Startup.cs
 C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Controllers\AboutController.cs
 C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Controllers\HomeController.cs
-C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Models\Restaurant.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Entities\Restaurant.cs
 C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Services\Greeter.cs
 C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Services\RestaurantData.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\ViewModels\HomePageViewModel.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\ViewModels\RestaurantEditViewModel.cs
