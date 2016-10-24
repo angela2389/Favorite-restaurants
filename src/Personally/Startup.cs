@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Routing;
 using RestaurantGuide.Services;
+using RestaurantGuide.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace RestaurantGuide
 {
@@ -33,7 +35,8 @@ namespace RestaurantGuide
             services.AddMvc();
             services.AddSingleton(Configuration);
             services.AddSingleton<IGreeter, Greeter>();
-            services.AddScoped<IRestaurantData, InMemoryRestaurantData>();
+            services.AddScoped<IRestaurantData, SqlRestaurantData>();
+            services.AddDbContext<RestaurantGuideDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("RestaurantGuide")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

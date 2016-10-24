@@ -1,6 +1,7 @@
 ﻿using RestaurantGuide.Entities;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace RestaurantGuide.Services
 {
@@ -9,6 +10,33 @@ namespace RestaurantGuide.Services
         IEnumerable<Restaurant> GetAll();
         Restaurant Get(int id);
         Restaurant Add(Restaurant newRestaurant);
+    }
+
+    public class SqlRestaurantData : IRestaurantData
+    {
+        private RestaurantGuideDbContext _context;
+
+        public SqlRestaurantData(RestaurantGuideDbContext context)
+        {
+            _context = context;
+        }
+
+        public Restaurant Add(Restaurant newRestaurant)
+        {
+            _context.Add(newRestaurant);
+            _context.SaveChanges();
+            return newRestaurant;
+        }
+
+        public Restaurant Get(int id)
+        {
+            return _context.Restaurants.FirstOrDefault(r => r.Id == id);
+        }
+
+        public IEnumerable<Restaurant> GetAll()
+        {
+            return _context.Restaurants;
+        }
     }
 
     public class InMemoryRestaurantData : IRestaurantData
