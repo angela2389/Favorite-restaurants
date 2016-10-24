@@ -1,5 +1,5 @@
---temp-output:C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\obj\Debug\netcoreapp1.0\
---out:C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\bin\Debug\netcoreapp1.0\Personally.dll
+--temp-output:C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\obj\Debug\netcoreapp1.0\
+--out:C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\bin\Debug\netcoreapp1.0\Personally.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -167,13 +167,13 @@
 --reference:C:\Users\sanderlokaal\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\sanderlokaal\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\sanderlokaal\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\obj\Debug\netcoreapp1.0\Personallydotnet-compile.deps.json",Personally.deps.json
-C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Program.cs
-C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Startup.cs
-C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Controllers\AboutController.cs
-C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Controllers\HomeController.cs
-C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Entities\Restaurant.cs
-C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Services\Greeter.cs
-C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\Services\RestaurantData.cs
-C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\ViewModels\HomePageViewModel.cs
-C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\Personally\src\Personally\ViewModels\RestaurantEditViewModel.cs
+--resource:"C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\obj\Debug\netcoreapp1.0\Personallydotnet-compile.deps.json",Personally.deps.json
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Program.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Startup.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Controllers\AboutController.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Controllers\HomeController.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Entities\Restaurant.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Services\Greeter.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Services\RestaurantData.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\ViewModels\HomePageViewModel.cs
+C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\ViewModels\RestaurantEditViewModel.cs

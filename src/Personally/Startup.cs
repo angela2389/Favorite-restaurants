@@ -9,9 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Routing;
-using Personally.Services;
+using RestaurantGuide.Services;
 
-namespace Personally
+namespace RestaurantGuide
 {
     public class Startup
     {

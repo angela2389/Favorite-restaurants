@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Personally.Entities;
-using Personally.Services;
-using Personally.ViewModels;
+using RestaurantGuide.Entities;
+using RestaurantGuide.Services;
+using RestaurantGuide.ViewModels;
 
-namespace Personally.Controllers
+namespace RestaurantGuide.Controllers
 {
     public class HomeController : Controller
     {

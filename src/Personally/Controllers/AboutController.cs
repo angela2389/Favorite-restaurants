@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Personally.Controllers
+namespace RestaurantGuide.Controllers
 {
     [Route("company/[controller]/[action]")]
     public class AboutController

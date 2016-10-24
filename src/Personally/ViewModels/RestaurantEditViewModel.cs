@@ -1,7 +1,7 @@
-﻿using Personally.Entities;
+﻿using RestaurantGuide.Entities;
 using System.ComponentModel.DataAnnotations;
 
-namespace Personally.ViewModels
+namespace RestaurantGuide.ViewModels
 {
     public class RestaurantEditViewModel
     {

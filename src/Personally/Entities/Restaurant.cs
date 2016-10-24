@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Personally.Entities
+namespace RestaurantGuide.Entities
 { 
     public enum CuisineType
     {

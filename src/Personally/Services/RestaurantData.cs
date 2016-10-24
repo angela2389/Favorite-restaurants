@@ -1,8 +1,8 @@
-﻿using Personally.Entities;
+﻿using RestaurantGuide.Entities;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Personally.Services
+namespace RestaurantGuide.Services
 {
     public interface IRestaurantData
     {

@@ -1,7 +1,7 @@
-﻿using Personally.Entities;
+﻿using RestaurantGuide.Entities;
 using System.Collections.Generic;
 
-namespace Personally.ViewModels
+namespace RestaurantGuide.ViewModels
 {
     public class HomePageViewModel
     {
