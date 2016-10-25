@@ -208,6 +208,7 @@
 "C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Entities\Restaurant.cs"
 "C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Entities\RestaurantGuideDbContext.cs"
 "C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Entities\User.cs"
+"C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Middleware\ApplicationBuilderExtensions.cs"
 "C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Migrations\20161024130958_InitialCreate.cs"
 "C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Migrations\20161024130958_InitialCreate.Designer.cs"
 "C:\Users\sanderlokaal\Documents\Visual Studio 2015\Projects\RestaurantGuide\src\Personally\Migrations\20161025110722_Identity.cs"

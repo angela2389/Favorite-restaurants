@@ -64,12 +64,9 @@ namespace RestaurantGuide
             }
 
             app.UseFileServer();
-
+            app.UseNodeModules(env.ContentRootPath);
             app.UseIdentity();
-
             app.UseMvc(ConfigureRoutes);
-
-            app.Run(ctx => ctx.Response.WriteAsync("Not found"));
         }
 
         private void ConfigureRoutes(IRouteBuilder routeBuilder)
