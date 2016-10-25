@@ -1,13 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace RestaurantGuide.Entities
 {
-    public class RestaurantGuideDbContext : DbContext
+    public class RestaurantGuideDbContext : IdentityDbContext<User>
     {
         
        public RestaurantGuideDbContext(DbContextOptions options) : base(options)
         {
-
         }
 
         public DbSet<Restaurant> Restaurants { get; set; }

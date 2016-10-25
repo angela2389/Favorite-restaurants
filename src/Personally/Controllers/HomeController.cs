@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RestaurantGuide.Entities;
 using RestaurantGuide.Services;
 using RestaurantGuide.ViewModels;
 
 namespace RestaurantGuide.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private IGreeter _greeter;
@@ -16,11 +18,11 @@ namespace RestaurantGuide.Controllers
             _greeter = greeter;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var model = new HomePageViewModel();
             model.Restaurants = _restaurantData.GetAll();
-            model.CurrentMessage = _greeter.GetGreeting();
 
             return View(model);
         }
@@ -60,6 +62,7 @@ namespace RestaurantGuide.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Edit(int id)
         {
