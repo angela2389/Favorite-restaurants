@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RestaurantGuide.Services
+namespace RestaurantGuide
 {
+
     public interface IGreeter
     {
         string GetGreeting();
     }
+
     public class Greeter : IGreeter
     {
         private string _greeting;
@@ -18,6 +20,7 @@ namespace RestaurantGuide.Services
         {
             _greeting = configuration["Greeting"];
         }
+
         public string GetGreeting()
         {
             return _greeting;
