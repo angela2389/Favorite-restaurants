@@ -55,6 +55,10 @@ namespace RestaurantGuide.Controllers
                 var newRestaurant = new Restaurant();
                 newRestaurant.Cuisine = model.Cuisine;
                 newRestaurant.Name = model.Name;
+                newRestaurant.Street = model.Street;
+                newRestaurant.Postal = model.Postal;
+                newRestaurant.City = model.City;
+                newRestaurant.Image = model.Image;
                 newRestaurant = _restaurantData.Add(newRestaurant);
                 _restaurantData.Commit();
 
@@ -84,6 +88,10 @@ namespace RestaurantGuide.Controllers
             {
                 restaurant.Cuisine = model.Cuisine;
                 restaurant.Name = model.Name;
+                restaurant.Street = model.Street;
+                restaurant.Postal = model.Postal;
+                restaurant.City = model.City;
+                restaurant.Image = model.Image;
                 _restaurantData.Commit();
 
                 return RedirectToAction("Details", new { id = restaurant.Id });

@@ -1,6 +1,6 @@
 ﻿@model RestaurantGuide.Entities.Restaurant
 
-@{ 
+@{
     ViewBag.Title = Model.Name;
 }
 
@@ -9,7 +9,15 @@
 <div>
     Id: @Model.Id
 </div>
-<div>
-    Cuisine = @Model.Cuisine
+<div class="restaurantbody">
+    <div class="restaurantimg">
+        <img src="@Model.Image" />
+    </div>
+    <div class="restaurantdetails">
+        <b>Address:</b>
+        <p> @Model.Street </p>
+        <p>@Model.Postal @Model.City </p><br />
+        <p>Phone number: @Model.PhoneNumber</p><br />
+        <p>Cuisine: @Model.Cuisine</p>
+    </div>
 </div>
-<div>@Html.ActionLink("Home", "Index")</div>

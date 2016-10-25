@@ -11,6 +11,10 @@
     border: 1px solid black;
 }
 
+.restaurantimg img{
+    width: 100%
+}
+
 .restaurantdetails{
     flex: 1;
 }

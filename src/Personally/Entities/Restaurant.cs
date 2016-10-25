@@ -20,7 +20,9 @@ namespace RestaurantGuide.Entities
         [Display(Name = "Restaurant Name")]
         public string Name { get; set; }
         public CuisineType Cuisine { get; set; }
+        [Display(Name = "Image URL")]
         public string Image { get; set; }
+        [Display(Name = "Street and House no.")]
         public string Street { get; set; }
         public string Postal { get; set; }
         public string City { get; set; }

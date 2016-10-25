@@ -16,6 +16,26 @@
                 <span asp-validation-for="Name"></span>
             </div>
             <div>
+                <label asp-for="Street"></label>
+                <input asp-for="Street" />
+                <span asp-validation-for="Street"></span>
+            </div>
+            <div>
+                <label asp-for="Postal"></label>
+                <input asp-for="Postal" />
+                <span asp-validation-for="Postal"></span>
+            </div>
+            <div>
+                <label asp-for="City"></label>
+                <input asp-for="City" />
+                <span asp-validation-for="City"></span>
+            </div>
+            <div>
+                <label asp-for="Image"></label>
+                <input asp-for="Image" />
+                <span asp-validation-for="Image"></span>
+            </div>
+            <div>
                 <label asp-for="Cuisine"></label>
                 <select asp-for="Cuisine" asp-items="@Html.GetEnumSelectList(typeof(CuisineType))"></select>
                 <span asp-validation-for="Cuisine"></span>
