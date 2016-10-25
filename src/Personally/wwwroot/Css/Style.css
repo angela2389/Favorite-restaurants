@@ -1,0 +1,43 @@
+﻿body {
+}
+
+.restaurantbody{
+    display: flex;
+}
+
+.restaurantimg{
+    flex: 1;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.restaurantdetails{
+    flex: 1;
+}
+
+.panel-default > .panel-heading {
+    background-color: #E0B9A4;
+}
+
+.container-fluid{
+    background-color: #914455;
+}
+
+.navbar-default .navbar-brand{
+    color: peachpuff;
+}
+
+.navbar-default .navbar-brand:hover{
+    color: peachpuff;
+}
+
+.btn-primary{
+    background-color: #AF6978;
+    border: 1px solid #E0C8A4;
+}
+
+.btn-primary:hover{
+    background-color: #EDC9D1;
+    border: 1px solid #E0C8A4;
+    color: #AF6978;
+}

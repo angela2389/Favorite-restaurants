@@ -7,6 +7,8 @@ namespace RestaurantGuide.ViewModels
     {
         [Required, MaxLength(80)]
         public string Name { get; set; }
+        public string Image { get; set; }
         public CuisineType Cuisine { get; set; }
+
     }
 }

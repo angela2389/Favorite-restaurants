@@ -8,9 +8,10 @@ using RestaurantGuide.Entities;
 namespace Personally.Migrations
 {
     [DbContext(typeof(RestaurantGuideDbContext))]
-    partial class RestaurantGuideDbContextModelSnapshot : ModelSnapshot
+    [Migration("20161025133019_Add image field")]
+    partial class Addimagefield
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -128,10 +129,6 @@ namespace Personally.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("AveragePrice");
-
-                    b.Property<string>("City");
-
                     b.Property<int>("Cuisine");
 
                     b.Property<string>("Image");
@@ -139,16 +136,6 @@ namespace Personally.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasAnnotation("MaxLength", 80);
-
-                    b.Property<string>("PhoneNumber");
-
-                    b.Property<string>("Postal");
-
-                    b.Property<int>("Rating");
-
-                    b.Property<string>("Street");
-
-                    b.Property<string>("Website");
 
                     b.HasKey("Id");
 

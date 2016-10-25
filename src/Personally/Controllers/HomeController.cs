@@ -27,6 +27,7 @@ namespace RestaurantGuide.Controllers
             return View(model);
         }
 
+        [AllowAnonymous]
         public IActionResult Details(int id)
         {
             var model = _restaurantData.Get(id);
@@ -62,7 +63,6 @@ namespace RestaurantGuide.Controllers
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult Edit(int id)
         {
@@ -74,6 +74,7 @@ namespace RestaurantGuide.Controllers
             return View(model);
         }
 
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, RestaurantEditViewModel model)
