@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace RestaurantGuide.Entities
 { 
@@ -29,6 +30,6 @@ namespace RestaurantGuide.Entities
         public string PhoneNumber { get; set;}
         public string Website { get; set; }
         public string AveragePrice { get; set; }
-        public int Rating { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

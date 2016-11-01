@@ -1,0 +1,25 @@
+﻿@model RestaurantGuide.ViewModels.ReviewCreateViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div>
+
+    <h1>Create</h1>
+
+    <div>
+        <form method="post" asp-antiforgery="true">
+            <div>
+                <label asp-for="Comment"></label>
+                <input asp-for="Comment" />
+                <span asp-validation-for="Comment"></span>
+            </div>
+            <div>
+                <input type="submit" value="Save!" />
+            </div>
+        </form>
+
+    </div>
+
+</div>
