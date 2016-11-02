@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using RestaurantGuide.Entities;
 using RestaurantGuide.Services;
 using RestaurantGuide.ViewModels;
+using System.Collections;
 
 namespace RestaurantGuide.Controllers
 {
@@ -11,10 +12,12 @@ namespace RestaurantGuide.Controllers
     {
         private IGreeter _greeter;
         private IRestaurantData _restaurantData;
+        private IReviewData _reviewData;
 
-        public HomeController(IRestaurantData restaurantData, IGreeter greeter)
+        public HomeController(IRestaurantData restaurantData, IReviewData reviewData, IGreeter greeter)
         {
             _restaurantData = restaurantData;
+            _reviewData = reviewData;
             _greeter = greeter;
         }
 

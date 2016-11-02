@@ -9,8 +9,11 @@ namespace RestaurantGuide.Services
     public interface IReviewData
     {
         Review Add(Review newReview);
+        Review Get(int id);
+        IEnumerable<Review> GetByRestaurant(int id);
+        void Commit();
     }
-    
+
     public class SqlReviewData : IReviewData
     {
         private RestaurantGuideDbContext _context;
@@ -25,6 +28,21 @@ namespace RestaurantGuide.Services
             _context.Add(newReview);
             _context.SaveChanges();
             return newReview;
+        }
+
+        public Review Get(int id)
+        {
+            return _context.Review.FirstOrDefault(r => r.Id == id);
+        }
+
+        public void Commit()
+        {
+            _context.SaveChanges();
+        }
+
+        public IEnumerable<Review> GetByRestaurant(int id)
+        {
+            return _context.Review.Where(r => r.RestaurantId == id);
         }
     }
 }

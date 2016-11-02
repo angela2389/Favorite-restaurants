@@ -10,17 +10,32 @@ namespace RestaurantGuide.Controllers
     public class ReviewController : Controller
     {
         private IReviewData _reviewdata;
+        private IRestaurantData _restaurantdata;
 
-        public ReviewController(IReviewData reviewdata)
+        public ReviewController(IReviewData reviewData, IRestaurantData restaurantData)
         {
-            _reviewdata = reviewdata;
+            _reviewdata = reviewData;
+            _restaurantdata = restaurantData;
         }
+
         public IActionResult Index()
         {
             return View();
         }
 
-        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            var model = _reviewdata.Get(id);
+            var rest = _restaurantdata.GetAll();
+
+            if (model == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(model);
+        }
+
         public IActionResult Create()
         {
             return View();
@@ -34,7 +49,10 @@ namespace RestaurantGuide.Controllers
             {
                 var newReview = new Review();
                 newReview.Comment = model.Comment;
+                newReview.RestaurantId = model.RestaurantId;
+                newReview.Rating = model.Rating;
                 newReview = _reviewdata.Add(newReview);
+                _reviewdata.Commit();
 
                 return RedirectToAction("Details", new { id = newReview.Id });
             }

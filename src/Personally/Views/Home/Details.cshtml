@@ -19,5 +19,13 @@
         <p>@Model.Postal @Model.City </p><br />
         <p>Phone number: @Model.PhoneNumber</p><br />
         <p>Cuisine: @Model.Cuisine</p>
+        <b>Reviews:</b>
+        
+        @foreach (var review in Model.Reviews)
+        {
+                <p>@review.Comment</p>
+        }
+
+        </p>
     </div>
 </div>

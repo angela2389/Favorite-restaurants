@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace RestaurantGuide.Services
 {
@@ -35,7 +36,9 @@ namespace RestaurantGuide.Services
 
         public Restaurant Get(int id)
         {
-            return _context.Restaurants.FirstOrDefault(r => r.Id == id);
+            return _context.Restaurants
+                .Include(restaurant => restaurant.Reviews)
+                .FirstOrDefault(r => r.Id == id);
         }
 
         public IEnumerable<Restaurant> GetAll()

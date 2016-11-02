@@ -1,0 +1,21 @@
+﻿@model RestaurantGuide.Entities.Review
+
+@{
+    ViewBag.Title = "Review";
+}
+
+<h1>"Review"</h1>
+
+<div>
+    Id: @Model.Id
+</div>
+<div>
+    <div>
+        <b>Comments:</b>
+        <p> @Model.Comment </p>
+        <b>Rating:</b>
+        <p> @Model.Rating</p><br />
+        <b>Restaurant:</b>
+        <p>Restaurant: @Model.RestaurantId </p>
+    </div>
+</div>
