@@ -26,7 +26,6 @@ namespace RestaurantGuide.Controllers
         public IActionResult Details(int id)
         {
             var model = _reviewdata.Get(id);
-            var rest = _restaurantdata.GetAll();
 
             if (model == null)
             {
@@ -36,20 +35,20 @@ namespace RestaurantGuide.Controllers
             return View(model);
         }
 
-        public IActionResult Create()
+        public IActionResult Create(int id)
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(ReviewCreateViewModel model)
+        public IActionResult Create(ReviewCreateViewModel model, int id)
         {
             if (ModelState.IsValid)
             {
                 var newReview = new Review();
                 newReview.Comment = model.Comment;
-                newReview.RestaurantId = model.RestaurantId;
+                newReview.RestaurantId = id;
                 newReview.Rating = model.Rating;
                 newReview = _reviewdata.Add(newReview);
                 _reviewdata.Commit();

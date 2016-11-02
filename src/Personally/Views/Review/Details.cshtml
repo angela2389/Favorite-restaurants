@@ -4,7 +4,7 @@
     ViewBag.Title = "Review";
 }
 
-<h1>"Review"</h1>
+<h1>Review</h1>
 
 <div>
     Id: @Model.Id
@@ -16,6 +16,6 @@
         <b>Rating:</b>
         <p> @Model.Rating</p><br />
         <b>Restaurant:</b>
-        <p>Restaurant: @Model.RestaurantId </p>
+        <p>@Model.Restaurant.Name </p>
     </div>
 </div>

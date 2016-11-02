@@ -17,15 +17,22 @@
         <b>Address:</b>
         <p> @Model.Street </p>
         <p>@Model.Postal @Model.City </p><br />
-        <p>Phone number: @Model.PhoneNumber</p><br />
-        <p>Cuisine: @Model.Cuisine</p>
-        <b>Reviews:</b>
-        
-        @foreach (var review in Model.Reviews)
-        {
-                <p>@review.Comment</p>
-        }
-
-        </p>
+        <b>Phone number:</b> <p>@Model.PhoneNumber</p><br />
+        <b>Cuisine:</b> <p></p>@Model.Cuisine</p>
     </div>
+</div>
+<div class="reviews">
+    <h2>Reviews</h2>
+
+    <a class="btn btn-primary" asp-controller="Review" asp-action="Create" asp-route-id="@Model.Id">Add new review</a>
+    <br />
+
+    @foreach (var review in Model.Reviews)
+    {
+        <b>Comments:</b>
+        <p>@review.Comment</p>
+        <b>Rating:</b>
+        <p>@review.Rating </p>
+    }
+
 </div>

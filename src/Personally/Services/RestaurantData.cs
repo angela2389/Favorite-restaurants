@@ -36,15 +36,18 @@ namespace RestaurantGuide.Services
 
         public Restaurant Get(int id)
         {
-            return _context.Restaurants
+            var restaurants = _context.Restaurants
                 .Include(restaurant => restaurant.Reviews)
-                .FirstOrDefault(r => r.Id == id);
+                .FirstOrDefault(r => r.Id == id); 
+
+            return restaurants;
         }
 
         public IEnumerable<Restaurant> GetAll()
         {
             return _context.Restaurants;
         }
+
     }
 
     public class InMemoryRestaurantData : IRestaurantData

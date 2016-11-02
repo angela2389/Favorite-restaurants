@@ -1,4 +1,5 @@
-﻿using RestaurantGuide.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using RestaurantGuide.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,9 @@ namespace RestaurantGuide.Services
 
         public Review Get(int id)
         {
-            return _context.Review.FirstOrDefault(r => r.Id == id);
+            return _context.Review
+                .Include(review => review.Restaurant)
+                .FirstOrDefault(r => r.Id == id);
         }
 
         public void Commit()
