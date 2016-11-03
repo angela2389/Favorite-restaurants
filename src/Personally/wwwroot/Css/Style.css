@@ -1,17 +1,36 @@
 ﻿body {
 }
-.restaurantbody{
+.restaurantbody {
     display: flex;
 }
 
-.restaurantimg{
+.restaurantimg {
     flex: 1;
     margin: 5px;
     border: 1px solid black;
+    position: relative;
+}
+
+.average-rating {
+    position: relative;
+    border: 1px dotted black;
+    border-radius: 50px;
+    background-color: #a00000;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    padding-left: 5px;
+    padding-top: 9px;
+}
+
+.rating {
+    position: absolute;
+    right: 0px;
+    color: white;
 }
 
 .restaurantimg img{
-    width: 100%
+    width: 100%;
 }
 
 .restaurantdetails{
@@ -23,7 +42,7 @@
 }
 
 .container-fluid{
-    background-color: #914455;
+    background-color: #a00000;
 }
 
 .navbar-default .navbar-brand{
@@ -35,12 +54,13 @@
 }
 
 .btn-primary{
-    background-color: #AF6978;
+    background-color: #a00000;
     border: 1px solid #E0C8A4;
 }
 
 .btn-primary:hover{
-    background-color: #EDC9D1;
-    border: 1px solid #E0C8A4;
-    color: #AF6978;
+    background-color: #E0C8A4;
+    border: 1px solid #a00000;
+    color: #a00000;
 }
+

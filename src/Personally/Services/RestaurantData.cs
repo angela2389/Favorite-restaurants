@@ -38,8 +38,8 @@ namespace RestaurantGuide.Services
         {
             var restaurants = _context.Restaurants
                 .Include(restaurant => restaurant.Reviews)
-                .FirstOrDefault(r => r.Id == id); 
-
+                .FirstOrDefault(r => r.Id == id);
+            
             return restaurants;
         }
 
@@ -47,44 +47,5 @@ namespace RestaurantGuide.Services
         {
             return _context.Restaurants;
         }
-
-    }
-
-    public class InMemoryRestaurantData : IRestaurantData
-    {
-        static InMemoryRestaurantData()
-        {
-            _restaurants = new List<Restaurant>
-            {
-                new Restaurant { Id = 1, Name="Hoornse Kaap"},
-                new Restaurant { Id = 2, Name="Torentje" },
-                new Restaurant { Id = 3, Name="Turf" }
-            };
-        }
-
-        public IEnumerable<Restaurant> GetAll()
-        {
-            return _restaurants;
-        }
-
-        public Restaurant Get(int id)
-        {
-            return _restaurants.FirstOrDefault(r => r.Id == id);
-        }
-
-        public Restaurant Add(Restaurant newRestaurant)
-        {
-            newRestaurant.Id = _restaurants.Max(r => r.Id) + 1;
-            _restaurants.Add(newRestaurant);
-
-            return newRestaurant;
-        }
-
-        public void Commit()
-        {
-            // no operation
-        }
-
-        static List<Restaurant> _restaurants;
     }
 }

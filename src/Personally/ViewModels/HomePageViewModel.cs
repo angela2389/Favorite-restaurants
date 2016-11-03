@@ -8,3 +8,4 @@ namespace RestaurantGuide.ViewModels
         public IEnumerable<Restaurant> Restaurants { get; set; }
     }
 }
+

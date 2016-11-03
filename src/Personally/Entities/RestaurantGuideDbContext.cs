@@ -9,6 +9,7 @@ namespace RestaurantGuide.Entities
         
        public RestaurantGuideDbContext(DbContextOptions options) : base(options)
         {
+
         }
 
         public DbSet<Restaurant> Restaurants { get; set; }

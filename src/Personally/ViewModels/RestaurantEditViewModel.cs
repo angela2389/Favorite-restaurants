@@ -14,5 +14,10 @@ namespace RestaurantGuide.ViewModels
         public string City { get; set; }
         public string PhoneNumber { get; set; }
         public string Website { get; set; }
+
+        public string TotalRating(int id)
+        {
+            return "1";
+        }
     }
 }

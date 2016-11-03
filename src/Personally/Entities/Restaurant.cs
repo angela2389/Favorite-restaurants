@@ -31,5 +31,26 @@ namespace RestaurantGuide.Entities
         public string Website { get; set; }
         public string AveragePrice { get; set; }
         public List<Review> Reviews { get; set; }
+
+        public decimal AverageRating(Restaurant restaurants)
+        {
+            var reviews = restaurants.Reviews;
+            decimal totalreviews = reviews.Count;
+            if (reviews.Count > 0)
+            {
+                decimal totalratings = 0;
+
+                foreach (var review in reviews)
+                {
+                    totalratings += review.Rating;
+                }
+                return totalratings / totalreviews;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
+
 }
