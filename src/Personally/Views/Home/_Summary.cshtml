@@ -5,8 +5,12 @@
     <div class="restaurantbody">
         <div class="restaurantimg">
             <div class="rating">
-                <b class="rating-text">Average Rating:</b>
-                <div class="average-rating"><b>@Model.AverageRating(@Model)</b></div>
+                <b class="rating-text">Average Rating</b>
+                <div class="average-rating">
+                    <div class="rating-no" style="background-color:rgba(80,280,10,0.@Math.Round(Model.AverageRating(@Model)))">
+                        <b>@Math.Round(Model.AverageRating(@Model), 1)</b>
+                    </div>
+                </div>
             </div>
             <img src="@Model.Image" />
         </div>
@@ -15,7 +19,7 @@
             <p> @Model.Street </p>
             <p>@Model.Postal @Model.City </p><br />
             <b>Phone number</b> <p>@Model.PhoneNumber</p><br />
-            <b>Cuisine:</b> <p>@Model.Cuisine</p>
+            <b>Cuisine</b> <p>@Model.Cuisine</p>
         </div>
     </div>
     <div class="panel-footer">

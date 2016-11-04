@@ -1,5 +1,17 @@
 ﻿body {
 }
+
+.welcome {
+    background-image:url(http://res.cloudinary.com/angela2389/image/upload/v1478270309/table-restaurant_uq0twq.jpg);
+    background-size: cover;
+    font-size: 100px;
+    color: white;
+    width: 100%;
+    height: 600px;
+    margin-top: -25px;
+    text-align: center;
+
+}
 .restaurantbody {
     display: flex;
 }
@@ -23,14 +35,11 @@
 
 .average-rating {
     position: relative;
-    border: 1px solid black;
     border-radius: 50px;
-    background-color: #a00000;
+    background-color: red;
     width: 40px;
     height: 40px;
     margin: auto;
-    padding-left: 5px;
-    padding-top: 9px;
 }
 
 .rating {
@@ -40,12 +49,21 @@
 }
 
 .rating-text {
-    background-color: rgba(80,0,0,0.5);
+    background-color: rgba(10,10,10,0.5);
     padding: 1px;
-    border-radius: 8px;
+    border-radius: 3px;
 }
 
-.restaurantdetails{
+.rating-no {
+    width:40px;
+    height:40px;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.restaurantdetails {
+    margin-top: 10px;
     flex: 1;
 }
 

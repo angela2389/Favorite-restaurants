@@ -10,7 +10,11 @@
     <div class="restaurantimg">
         <div class="rating">
             <b class="rating-text">Average Rating:</b>
-            <div class="average-rating"><b>@Model.AverageRating(@Model)</b></div>
+            <div class="average-rating">
+                <div class="rating-no" style="background-color:rgba(80,280,10,0.@Math.Round(Model.AverageRating(@Model)))">
+                    <b>@Math.Round(Model.AverageRating(@Model), 1)</b>
+                </div>
+            </div>
         </div>
         <img src="@Model.Image" />
     </div>
@@ -26,7 +30,7 @@
     <h2>Reviews</h2>
 
     <a class="btn btn-primary" asp-controller="Review" asp-action="Create" asp-route-id="@Model.Id">Add new review</a>
-    <br />
+    <br /><br />
 
     @foreach (var review in Model.Reviews)
     {

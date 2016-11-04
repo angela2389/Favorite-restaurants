@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using RestaurantGuide.Entities;
 using RestaurantGuide.Services;
 using RestaurantGuide.ViewModels;
+using System;
 using System.Collections;
+using System.Linq;
 
 namespace RestaurantGuide.Controllers
 {
@@ -22,9 +24,10 @@ namespace RestaurantGuide.Controllers
         }
 
         [AllowAnonymous]
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
             var model = new HomePageViewModel();
+        
             model.Restaurants = _restaurantData.GetAll();
 
             return View(model);
