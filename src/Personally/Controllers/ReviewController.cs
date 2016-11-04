@@ -2,6 +2,8 @@
 using RestaurantGuide.Entities;
 using RestaurantGuide.Services;
 using RestaurantGuide.ViewModels;
+using System;
+using System.Security.Claims;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -49,7 +51,9 @@ namespace RestaurantGuide.Controllers
                 var newReview = new Review();
                 newReview.Comment = model.Comment;
                 newReview.RestaurantId = id;
+                newReview.UserName = User.Identity.Name;
                 newReview.Rating = model.Rating;
+                newReview.Date = model.Date;
                 newReview = _reviewdata.Add(newReview);
                 _reviewdata.Commit();
 

@@ -202,6 +202,7 @@
 --reference:C:\Users\sanderlokaal\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\sanderlokaal\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\sanderlokaal\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
+--reference:C:\Users\sanderlokaal\.nuget\packages\TagHelperSamples.Bootstrap\1.1.1\lib\netstandard1.6\TagHelperSamples.Bootstrap.dll
 --resource:"C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\obj\Debug\netcoreapp1.0\Personallydotnet-compile.deps.json",Personally.deps.json
 C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Greeter.cs
 C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Program.cs
@@ -225,8 +226,10 @@ C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\M
 C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Migrations\20161025134105_Add multiple fields to restaurant.Designer.cs
 C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Migrations\20161026074545_Reviews.cs
 C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Migrations\20161026074545_Reviews.Designer.cs
-C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Migrations\20161026080205_AddUserToReviews.cs
-C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Migrations\20161026080205_AddUserToReviews.Designer.cs
+C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Migrations\20161104103535_AddRatingToReview.cs
+C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Migrations\20161104103535_AddRatingToReview.Designer.cs
+C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Migrations\20161104112716_DateToReview.cs
+C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Migrations\20161104112716_DateToReview.Designer.cs
 C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Migrations\RestaurantGuideDbContextModelSnapshot.cs
 C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Services\RestaurantData.cs
 C:\Users\sanderlokaal\Documents\Angela\Projects\RestaurantGuide\src\Personally\Services\ReviewData.cs

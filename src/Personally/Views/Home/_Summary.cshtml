@@ -4,15 +4,19 @@
     <h3 class="panel-heading">@Model.Name</h3>
     <div class="restaurantbody">
         <div class="restaurantimg">
+            <div class="rating">
+                <b class="rating-text">Average Rating:</b>
+                <div class="average-rating"><b>@Model.AverageRating(@Model)</b></div>
+            </div>
             <img src="@Model.Image" />
         </div>
         <div class="restaurantdetails">
-        <b>Address:</b>
-        <p> @Model.Street </p>
-        <p>@Model.Postal @Model.City </p><br />
-        <p>Phone number: @Model.PhoneNumber</p><br />
-        <p>Cuisine: @Model.Cuisine</p>
-    </div>
+            <b>Address</b>
+            <p> @Model.Street </p>
+            <p>@Model.Postal @Model.City </p><br />
+            <b>Phone number</b> <p>@Model.PhoneNumber</p><br />
+            <b>Cuisine:</b> <p>@Model.Cuisine</p>
+        </div>
     </div>
     <div class="panel-footer">
         <a class="btn btn-primary" asp-action="Details" asp-route-id="@Model.Id">Details</a>

@@ -15,5 +15,7 @@ namespace RestaurantGuide.ViewModels
         [Range(0,10)]
         public decimal Rating { get; set; }
         public int RestaurantId { get; set; }
+
+        public DateTime Date { get; set; }
     }
 }

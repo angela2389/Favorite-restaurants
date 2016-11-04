@@ -9,11 +9,21 @@
     margin: 5px;
     border: 1px solid black;
     position: relative;
+    border-radius: 8px;
+}
+
+.restaurantimg img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.details-review {
+    border-top: 1px solid #c5c5c5;
 }
 
 .average-rating {
     position: relative;
-    border: 1px dotted black;
+    border: 1px solid black;
     border-radius: 50px;
     background-color: #a00000;
     width: 40px;
@@ -29,8 +39,10 @@
     color: white;
 }
 
-.restaurantimg img{
-    width: 100%;
+.rating-text {
+    background-color: rgba(80,0,0,0.5);
+    padding: 1px;
+    border-radius: 8px;
 }
 
 .restaurantdetails{
@@ -64,3 +76,8 @@
     color: #a00000;
 }
 
+.inputfield{
+
+height:50px
+
+}

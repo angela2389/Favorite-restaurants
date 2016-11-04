@@ -8,8 +8,8 @@ using RestaurantGuide.Entities;
 namespace Personally.Migrations
 {
     [DbContext(typeof(RestaurantGuideDbContext))]
-    [Migration("20161026080205_AddUserToReviews")]
-    partial class AddUserToReviews
+    [Migration("20161104103535_AddUserToReview")]
+    partial class AddUserToReview
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -165,13 +165,15 @@ namespace Personally.Migrations
 
                     b.Property<int>("RestaurantId");
 
-                    b.Property<string>("UserId");
+                    b.Property<int>("UserId");
+
+                    b.Property<string>("UserId1");
 
                     b.HasKey("Id");
 
                     b.HasIndex("RestaurantId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.ToTable("Review");
                 });
@@ -271,7 +273,7 @@ namespace Personally.Migrations
 
                     b.HasOne("RestaurantGuide.Entities.User", "User")
                         .WithMany("Reviews")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId1");
                 });
         }
     }

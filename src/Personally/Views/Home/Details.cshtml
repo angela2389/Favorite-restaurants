@@ -9,7 +9,7 @@
 <div class="restaurantbody">
     <div class="restaurantimg">
         <div class="rating">
-            <b>Average Rating:</b>
+            <b class="rating-text">Average Rating:</b>
             <div class="average-rating"><b>@Model.AverageRating(@Model)</b></div>
         </div>
         <img src="@Model.Image" />
@@ -21,19 +21,25 @@
         <b>Phone number</b> <p>@Model.PhoneNumber</p><br />
         <b>Cuisine:</b> <p>@Model.Cuisine</p>
     </div>
-    </div>
-    <div class="reviews">
-        <h2>Reviews</h2>
+</div>
+<div class="reviews">
+    <h2>Reviews</h2>
 
-        <a class="btn btn-primary" asp-controller="Review" asp-action="Create" asp-route-id="@Model.Id">Add new review</a>
-        <br />
+    <a class="btn btn-primary" asp-controller="Review" asp-action="Create" asp-route-id="@Model.Id">Add new review</a>
+    <br />
 
-        @foreach (var review in Model.Reviews)
-        {
+    @foreach (var review in Model.Reviews)
+    {
+        <div class="details-review">
+            <b>Username:</b>
+            <p>@review.UserName</p>
+
             <b>Comments:</b>
             <p>@review.Comment</p>
+
             <b>Rating:</b>
             <p>@review.Rating </p>
-        }
+        </div>
+    }
 
-    </div>
+</div>

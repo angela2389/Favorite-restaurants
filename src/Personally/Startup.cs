@@ -9,6 +9,10 @@ using RestaurantGuide.Services;
 using RestaurantGuide.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Localization;
+using System;
+using System.Globalization;
+using System.Collections.Generic;
 
 namespace RestaurantGuide
 {
@@ -29,7 +33,8 @@ namespace RestaurantGuide
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc()
+                                .AddDataAnnotationsLocalization();
             services.AddSingleton(Configuration);
             services.AddSingleton<IGreeter, Greeter>();
             services.AddScoped<IRestaurantData, SqlRestaurantData>();
@@ -37,6 +42,7 @@ namespace RestaurantGuide
             services.AddDbContext<RestaurantGuideDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("RestaurantGuide")));
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<RestaurantGuideDbContext>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,10 +66,12 @@ namespace RestaurantGuide
                 });
             }
 
+            app.UseRequestLocalization();
             app.UseFileServer();
             app.UseNodeModules(env.ContentRootPath);
             app.UseIdentity();
             app.UseMvc(ConfigureRoutes);
+
         }
 
         private void ConfigureRoutes(IRouteBuilder routeBuilder)

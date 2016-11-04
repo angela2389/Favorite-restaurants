@@ -45,7 +45,7 @@ namespace RestaurantGuide.Services
 
         public IEnumerable<Restaurant> GetAll()
         {
-            return _context.Restaurants;
+            return _context.Restaurants.Include(restaurant => restaurant.Reviews);
         }
     }
 }

@@ -61,6 +61,7 @@ namespace RestaurantGuide.Controllers
                 newRestaurant.Street = model.Street;
                 newRestaurant.Postal = model.Postal;
                 newRestaurant.City = model.City;
+                newRestaurant.PhoneNumber = model.PhoneNumber;
                 newRestaurant.Image = model.Image;
                 newRestaurant = _restaurantData.Add(newRestaurant);
                 _restaurantData.Commit();
@@ -94,6 +95,7 @@ namespace RestaurantGuide.Controllers
                 restaurant.Street = model.Street;
                 restaurant.Postal = model.Postal;
                 restaurant.City = model.City;
+                restaurant.PhoneNumber = model.PhoneNumber;
                 restaurant.Image = model.Image;
                 _restaurantData.Commit();
 

@@ -8,9 +8,10 @@ using RestaurantGuide.Entities;
 namespace Personally.Migrations
 {
     [DbContext(typeof(RestaurantGuideDbContext))]
-    partial class RestaurantGuideDbContextModelSnapshot : ModelSnapshot
+    [Migration("20161104112716_DateToReview")]
+    partial class DateToReview
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
