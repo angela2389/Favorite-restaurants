@@ -6,6 +6,7 @@ using RestaurantGuide.ViewModels;
 using System;
 using System.Collections;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace RestaurantGuide.Controllers
 {
@@ -24,11 +25,15 @@ namespace RestaurantGuide.Controllers
         }
 
         [AllowAnonymous]
-        public IActionResult Index(string id)
+        public IActionResult Index(string Searchstring)
         {
             var model = new HomePageViewModel();
-        
             model.Restaurants = _restaurantData.GetAll();
+
+            if (!String.IsNullOrEmpty(Searchstring))
+            {
+                model.Restaurants = model.Restaurants.Where(s => s.Name.Contains(Searchstring));
+            }
 
             return View(model);
         }

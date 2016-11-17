@@ -4,14 +4,21 @@
 .welcome {
     background-image:url(http://res.cloudinary.com/angela2389/image/upload/v1478270309/table-restaurant_uq0twq.jpg);
     background-size: cover;
-    font-size: 100px;
-    color: white;
     width: 100%;
-    height: 600px;
+    height: 500px;
     margin-top: -25px;
     text-align: center;
-
 }
+
+.welcome h1 {
+   font-size: 100px;
+       color: #fff;
+}
+
+.welcome h2 {
+    color: #000;
+}
+
 .restaurantbody {
     display: flex;
 }

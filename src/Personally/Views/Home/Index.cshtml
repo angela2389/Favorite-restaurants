@@ -5,9 +5,15 @@
 }
 
 <div class="welcome">
-    <p>Welcome to</p>
-    <p>Angela's favorites</p>
-    <p>SEARCH</p>
+    <h1>Welcome to</h1>
+    <h1>Angela's favorites</h1>
+    <br />
+    <form asp-controller="Home" asp-action="Index">
+        <h2>
+            <input type="text" name="SearchString" placeholder="Restaurant name" />
+            <input type="submit" value="Search" />
+        </h2>
+    </form>
 
 </div>
 

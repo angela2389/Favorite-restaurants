@@ -42,6 +42,10 @@ namespace RestaurantGuide
             services.AddDbContext<RestaurantGuideDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("RestaurantGuide")));
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<RestaurantGuideDbContext>();
+            services.AddRouting(options =>
+            {
+                options.LowercaseUrls = true;
+            });
 
         }
 
